@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "My project Openclassrooms 3 Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jenniebeal/Zhenbeal_3_03022022.git"
+  },
+  "author": "Jennie BEAL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jenniebeal/Zhenbeal_3_03022022/issues"
+  },
+  "homepage": "https://github.com/Jenniebeal/Zhenbeal_3_03022022#readme",
+  "devDependencies": {
+    "sass": "^1.49.7"
+  }
+}
