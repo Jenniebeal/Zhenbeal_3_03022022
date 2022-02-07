@@ -1,62 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin:0px;
-    font-family: "Roboto",sans-serif;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
 }
+
+main {
+  padding: 0 1rem;
+}
+
 header {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px;
-    text-align: center;
-    box-shadow: 0 0 0.5rem rgb(0 0 0 /25%);
-    padding: 0.3rem;
-    margin: 0;
-    position: relative;
+  font-family: "Shrikhand", cursive;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 0.3rem;
+  margin: 0;
+  position: relative;
 }
 
 .city {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:1rem;
-    background-color: #f3f3f3;
-    text-align: center;
-    padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 0.5rem;
 }
 .city i {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 /*explorer*/
 .explorer {
-    text-align: center;
+  text-align: center;
 }
 .explorer h2 {
-    margin-top: 2rem;
-    font-size: 2rem;
+  margin-top: 2rem;
+  font-size: 2rem;
 }
 .explorer button {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 400;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 2rem;
-    box-shadow: 2px 1px 8px -3px #000000;
-    background-image: linear-gradient(to top,#9356DC,#ff79da );
-    transition: transform 200ms;
-    margin-top: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+  background-image: linear-gradient(to top, #9356DC, #ff79da);
+  transition: transform 200ms;
+  margin-top: 1rem;
 }
-.explorer button:hover {
-    transform: scale(1.02);
-    opacity: 0.9;
+.explorer button :hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
+
+.fonction {
+  counter-reset: chiffres;
+}
+.fonction ol {
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .fonction ol {
+    flex-direction: column;
+  }
+}
+.fonction li {
+  position: relative;
+  list-style-type: none;
+  background-color: #f6f6f6;
+  padding: 1.3rem 2rem;
+  border: none;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+}
+.fonction li::before {
+  content: counter(chiffres);
+  counter-increment: chiffres;
+  color: white;
+  background-color: #9356DC;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+}
+.fonction li:hover {
+  transform: scale(1.02);
+}
+.fonction li i.fas {
+  margin-right: 1rem;
+  color: #7e7e7e;
+}
+
+/*# sourceMappingURL=style.css.map */

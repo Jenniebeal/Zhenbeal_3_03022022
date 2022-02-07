@@ -1,0 +1,48 @@
+@use "../Utils/box-shadow";
+@use "../Utils/zoom";
+@use "../Utils/variables";
+@use "../Utils/colors";
+
+$base-height:1rem;
+.fonction {
+    counter-reset: chiffres;
+    & ol {
+        display: flex;
+        gap: 2rem;
+        @media (max-width:1000px){
+            flex-direction: column; 
+        }
+    }
+   
+    & li {
+        position: relative;
+        &::before {
+            content: counter(chiffres);
+            counter-increment: chiffres;
+            color:white;
+            background-color: colors.$purple;
+            width: 2 * variables.$base-height;
+            height: 2 * variables.$base-height;
+            display:grid;
+            place-items: center;
+            border-radius: 50%;
+            position:absolute;
+            bottom: variables.$base-height;
+            left:-1 * variables.$base-height;
+        }
+        list-style-type: none;
+        background-color: #f6f6f6;
+        padding: 1.3rem 2rem;
+        border: none;
+        flex-grow: 1;
+        border-radius: 1rem;
+        @include box-shadow.base-shadow;
+        &:hover {
+            @include zoom.transform-zoom;
+        }
+        & i.fas {
+            margin-right: 1rem;
+            color: colors.$lightgrey ;
+        }
+    }   
+}
