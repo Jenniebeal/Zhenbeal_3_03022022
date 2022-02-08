@@ -5,8 +5,13 @@
     gap:1rem;
     background-color: #f3f3f3;
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.2rem;
+
     & i {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    }
+    & h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
     }
 }

@@ -4,6 +4,9 @@
 @use "../Utils/colors";
 
 $base-height:1rem;
+.fonction h2 {
+    margin-left: 1.3rem;
+}
 .fonction {
     counter-reset: chiffres;
     & ol {
@@ -36,6 +39,7 @@ $base-height:1rem;
         border: none;
         flex-grow: 1;
         border-radius: 1rem;
+        margin-right: 1rem;
         @include box-shadow.base-shadow;
         &:hover {
             @include zoom.transform-zoom;
@@ -46,3 +50,4 @@ $base-height:1rem;
         }
     }   
 }
+

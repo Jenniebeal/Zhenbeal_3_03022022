@@ -32,10 +32,14 @@ header {
   gap: 1rem;
   background-color: #f3f3f3;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.2rem;
 }
 .city i {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+.city h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 /*explorer*/
@@ -44,16 +48,33 @@ header {
 }
 .explorer h2 {
   margin-top: 2rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
+}
+@media (max-width: 1000px) {
+  .explorer h2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+.explorer p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #7e7e7e;
+}
+@media (max-width: 1000px) {
+  .explorer p {
+    margin-left: 1.3rem;
+    margin-right: 2rem;
+  }
 }
 .explorer button {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.05rem;
   font-weight: 400;
-  padding: 1rem 2rem;
+  padding: 1rem 1.6rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 2px 1px 8px -3px #000000;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, #9356DC, #ff79da);
   transition: transform 200ms;
   margin-top: 1rem;
@@ -61,6 +82,10 @@ header {
 .explorer button :hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+
+.fonction h2 {
+  margin-left: 1.3rem;
 }
 
 .fonction {
@@ -83,7 +108,8 @@ header {
   border: none;
   flex-grow: 1;
   border-radius: 1rem;
-  box-shadow: 2px 1px 8px -3px #000000;
+  margin-right: 1rem;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
 }
 .fonction li::before {
   content: counter(chiffres);
