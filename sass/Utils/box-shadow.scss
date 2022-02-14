@@ -1,5 +1,0 @@
-@use "../Utils/colors";
-
-@mixin base-shadow {
-    box-shadow: 2px 1px 8px -3px colors.$lightgrey;
-}

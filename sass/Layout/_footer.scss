@@ -1,0 +1,18 @@
+@use "./../Utils/colors";
+
+/* partie footer*/
+footer {
+    background-color: colors.$darkgrey;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+    h2 {
+        font-family: "Shrikhand", "sans-serif";
+        font-weight: 100;
+        font-size: 20px;
+        padding: 1rem 0;
+    }
+    p {
+        padding: 0.2rem;
+    }
+}

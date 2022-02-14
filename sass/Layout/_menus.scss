@@ -1,0 +1,63 @@
+
+/* partie menus*/
+@use "../Utils/variables";
+@use "../Utils/colors";
+
+.menu {
+    h2 {
+        padding: 2rem 0 0 1rem;
+        margin-bottom: 2rem;
+    }
+    background-color: #f6f6f6;
+
+    .menu_carte {
+        display: grid;
+        gap: 2rem;
+        margin: 0 0.2rem 0 1rem;
+    
+        .nouveau {
+            position: relative;
+        }
+        .nouveau ::before {
+            content:"Nouveau";
+            position:absolute;
+            width: 5.5rem;
+            height: 2rem;
+            background-color: colors.$tertiaire;
+            color:darken(colors.$tertiaire, 40%);
+            display: grid;
+            place-items: center;
+            right: 1rem;
+            top: 1rem;
+        }
+    }
+    .carte {
+        border: none;
+        border-radius: 1rem;
+        margin: 0 1.2rem 0 0.3rem;
+        &_image {
+            height: 11rem;
+            border-radius: 1rem 1rem 0 0;
+            background-size: cover;  
+        }
+        @for $i from 1 through 4 {
+            &_image-#{$i} {
+                background-image: url("../../images/menu_#{$i}.jpg");
+            }
+        }
+        &_description {
+            background-color: white;
+
+            h3 {
+                padding-top: 1rem;
+            }
+            p {
+                margin: 0.5rem;
+            }
+            
+            & i {
+                font-size: 18px;
+            }
+        } 
+    }
+}

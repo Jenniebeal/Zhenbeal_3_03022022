@@ -1,11 +1,13 @@
-@use "../Utils/box-shadow";
+@use "../Utils/mixins";
 @use "../Utils/colors";
 
-/*explorer*/
+/* partie explorer*/
 .explorer {
     text-align: center;
-
-    & h2 {
+    background-color: #f6f6f6;
+    padding-top: 0.1rem;
+    padding-bottom: 3rem;
+    & h1 {
     margin-top: 2rem;
     font-size: 1.6rem;
     @media (max-width:1000px) {
@@ -30,7 +32,7 @@
     padding: 1rem 1.6rem;
     border: none;
     border-radius: 2rem;
-    @include box-shadow.base-shadow;
+    @include mixins.base-shadow;
     background-image: linear-gradient(to top,#9356DC,#ff79da );
     transition: transform 200ms;
     margin-top: 1rem;
