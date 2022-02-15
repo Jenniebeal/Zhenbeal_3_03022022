@@ -52,17 +52,15 @@ header {
 .city i {
   font-size: 1.2rem;
   color: #353535;
+  padding-left: 5rem;
+}
+.city input[type=search] {
+  border: none;
+  background-color: #eaeaea;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-/*::placeholder {
-    border:none;
-    padding: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color:#eaeaea;
-    background-color: #eaeaea;
-
-}??? */
 /* partie explorer*/
 .explorer {
   text-align: center;
@@ -181,8 +179,7 @@ header {
 .menu .menu_cartes .nouveau {
   position: relative;
 }
-.menu .menu_cartes .nouveau ::before {
-  content: "Nouveau";
+.menu .menu_cartes .nouveauIcone {
   position: absolute;
   width: 5.5rem;
   height: 2rem;
@@ -204,16 +201,16 @@ header {
   background-size: cover;
 }
 .menu .carte_image-1 {
-  background-image: url("../../images/menu_1.jpg");
+  background-image: url("images/menu_1.jpg");
 }
 .menu .carte_image-2 {
-  background-image: url("../../images/menu_2.jpg");
+  background-image: url("images/menu_2.jpg");
 }
 .menu .carte_image-3 {
-  background-image: url("../../images/menu_3.jpg");
+  background-image: url("images/menu_3.jpg");
 }
 .menu .carte_image-4 {
-  background-image: url("../../images/menu_4.jpg");
+  background-image: url("images/menu_4.jpg");
 }
 .menu .carte_description {
   position: relative;
@@ -275,6 +272,7 @@ footer p {
 
 h2 {
   font-family: "Shrikhand", "cursive";
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */

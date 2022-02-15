@@ -1,6 +1,6 @@
 @use "../Utils/mixins";
 @use "../Utils/colors";
-@use "../Utils/linear-gradient";
+
 
 /* partie explorer*/
 .explorer {
@@ -35,7 +35,7 @@
     border-radius: 2rem;
     margin-top: 1rem;
     @include mixins.base-shadow;
-    @include linear-gradient.gradient;
+    @include mixins.gradient;
     transition: all 200ms ease-in-out;
         &:hover {
         transform: scale(1.05);

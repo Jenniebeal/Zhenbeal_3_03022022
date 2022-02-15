@@ -2,7 +2,7 @@
 /* partie menus*/
 @use "../Utils/variables";
 @use "../Utils/colors";
-@use "../Utils/linear-gradient";
+@use "../Utils/mixins";
 
 .menu {
     background-color: #f6f6f6;
@@ -18,8 +18,7 @@
         .nouveau {
             position: relative;
         }
-        .nouveau ::before {
-            content:"Nouveau";
+        .nouveauIcone {
             position:absolute;
             width: 5.5rem;
             height: 2rem;
@@ -42,7 +41,7 @@
         }
         @for $i from 1 through 4 {
             &_image-#{$i} {
-                background-image: url("../../images/menu_#{$i}.jpg");
+                background-image: url("images/menu_#{$i}.jpg");
             }
         }
         &_description {
@@ -67,7 +66,7 @@
                 background-clip: text;
                 -webkit-background-clip: text;
                 opacity:0;
-                @include linear-gradient.gradient(1);
+                @include mixins.gradient(1);
                 transition: all 200ms ease-in-out;
             }
             &:hover .fas {
