@@ -16,8 +16,10 @@ body {
 
 main {  
     padding: 0;
-    
+    @media (max-width:1000px) {
+        padding: 0 1rem;
     }
+}
 
 h3,p {
     margin:0;

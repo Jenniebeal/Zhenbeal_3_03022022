@@ -1,9 +1,10 @@
 
-/* partie menus*/
+
 @use "../Utils/variables";
 @use "../Utils/colors";
 @use "../Utils/mixins";
 
+/* partie menus*/
 .menu {
     background-color: #f6f6f6;
     h2 {
@@ -45,33 +46,11 @@
             }
         }
         &_description {
-            position:relative;
-            background-color: white;
-            border-radius: 0 0 1rem 1rem;
             padding-bottom: 0.5rem;
+            @include mixins.heart-animated;
             
             h3,p {
                 padding: 0.3rem;
-            }
-            
-            & i {
-                font-size: 18px;
-                position:absolute;
-                right:1rem;
-                top:50%;
-                transform:translateY(-50%) ;
-            }
-            .fas {
-                color:transparent;
-                background-clip: text;
-                -webkit-background-clip: text;
-                opacity:0;
-                @include mixins.gradient(1);
-                transition: all 200ms ease-in-out;
-            }
-            &:hover .fas {
-                 opacity: 1;
-                 transform:translateY(-50%) scale(1.2);
             }
         } 
     }

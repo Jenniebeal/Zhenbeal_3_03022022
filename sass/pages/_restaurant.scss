@@ -1,5 +1,12 @@
+@use "../Utils/mixins";
+@use "../Utils/variables";
+@use "../Utils/colors";
 
+body {
+    background-color: colors.$lightergrey;
+}
 .banner img {
+    display: block;
     width: 100%;
     height: 130vh;
     object-fit: cover;
@@ -9,9 +16,38 @@
     }
 }
 
-h2 {
-    font-family: "Shrikhand", "cursive";
-    font-size: 18px;
+.restaurant-main {
+    padding: 0 1rem;
+    background-color: colors.$lightergrey;
+   
 }
+.menu-nom {
+    margin-top: -3rem;
+    
+    h2 {
+        font-family: "Shrikhand", "cursive";
+        padding: 2rem 1rem;
+        font-size: 1.6rem;
+        @include mixins.heart-animated;
+        border-radius: 2rem 2rem 0 0;
+        background-color: colors.$lightergrey;
+        
+    }
+}
+.details {
+    background-color: colors.$lightergrey;
+    display: grid;
+    gap:1rem;
+    grid-template-columns: repeat(3,1fr);
+    @media (max-width: variables.$breakpoint) {
+        grid-template-columns: 1fr;
+    }
+    .menu_liste {
+        border: 1px solid rosybrown;
+        background-color: white;
+    }
+
+}
+
 
 
