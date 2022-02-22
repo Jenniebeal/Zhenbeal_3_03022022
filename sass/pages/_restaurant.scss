@@ -1,53 +1,158 @@
 @use "../Utils/mixins";
 @use "../Utils/variables";
 @use "../Utils/colors";
+@use "../Utils/animations";
 
 body {
     background-color: colors.$lightergrey;
 }
-.banner img {
-    display: block;
-    width: 100%;
-    height: 130vh;
-    object-fit: cover;
-    object-position: center bottom;
-    @media (max-width:1000px) {
-        height:38vh;
+#page-resto {
+    header {
+    &:hover::before {
+        @include mixins.transform-zoom(1.2,translateY(-50%));
     }
+    &::before {
+        @include mixins.font-awesome($font-weight:900);
+        content: "\f060";
+        left: 1rem;
+        top:50%;
+        transform: translateY(-50%);
+        font-size: 19px;
+        transition: transform 500ms;
+        }
+    }
+
+    .banner img {
+        display: block;
+        width: 100%;
+        height: 130vh;
+        object-fit: cover;
+        object-position: center bottom;
+        @media (max-width:1000px) {
+            height:38vh;
+        }
+    }
+
+    .restaurant-main {
+        padding: 0 1rem;
+        background-color: colors.$lightergrey;
+    
+    }
+    .menu-nom {
+        margin-top: -3rem;
+        
+        h2 {
+            font-family: "Shrikhand", "cursive";
+            padding: 2rem 1rem;
+            font-size: 1.6rem;
+            @include mixins.heart-animated;
+            border-radius: 2rem 2rem 0 0;
+            background-color: colors.$lightergrey;
+            
+        }
+    }
+    .details {
+        background-color: colors.$lightergrey;
+        display: grid;
+        gap:1rem;
+        grid-template-columns: repeat(3,1fr);
+        @media (max-width: variables.$breakpoint) {
+            grid-template-columns: 1fr;
+        }
+
+    h3{
+        font-weight: 300;
+        font-size: 16px;
+        text-transform: uppercase;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 1.6rem;
+            left: 0rem;
+            height: 0.2rem;
+            width: 3rem;
+            background-color: colors.$tertiaire; 
+        }
+    }
+
+    .menu_liste {
+        overflow: hidden;
+        .menu-item {
+            display: flex;
+            background-color: white;
+            border-radius: 1rem;
+            margin: 1rem;
+            padding-left: 0.8rem;
+            overflow: hidden;
+            animation: appear 1s;
+            @include mixins.base-shadow;
+            .menu-item_prix {
+                margin-left: auto;
+                font-weight: bold;
+                padding:1rem;
+                display: flex;
+                align-items: flex-end;
+            }
+            .menu-item_description{
+                overflow: hidden;
+                
+                h4,p {
+                    margin-bottom: 6px;
+                    font-size: 18px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap; 
+                }
+            }
+            .menu-item_check {
+                display: grid;
+                place-items: center;
+                flex-shrink: 0;
+                $button-width:4rem;
+                border-radius: 0 1rem 1rem 0;
+                background-color: colors.$tertiaire;
+                margin-right: -1 * $button-width;
+                width: $button-width;
+                transition: margin-right 500s;
+            }
+            i {
+                display: grid;
+                place-items: center;
+                background-color: white;
+                color:colors.$tertiaire;
+                aspect-ratio:1;
+                width: 1.3rem;
+                border-radius: 1rem;
+
+            }
+            &:hover {
+                cursor: pointer;
+                .menu-item_check {
+                margin-right: 0;
+                }
+                i {
+                    @include animations.quaterspin;
+                    animation: quqrerspin 1s ease-in-out;
+                }
+            }
+        }
+    }
+    
+    
+    
+
 }
 
-.restaurant-main {
-    padding: 0 1rem;
-    background-color: colors.$lightergrey;
-   
-}
-.menu-nom {
-    margin-top: -3rem;
-    
-    h2 {
-        font-family: "Shrikhand", "cursive";
-        padding: 2rem 1rem;
-        font-size: 1.6rem;
-        @include mixins.heart-animated;
-        border-radius: 2rem 2rem 0 0;
-        background-color: colors.$lightergrey;
+    section.commander {
+        height: 30vh;
+        display: grid; 
+        place-items: center;
+        button {
+            @include mixins.base-button;
+        }
         
     }
 }
-.details {
-    background-color: colors.$lightergrey;
-    display: grid;
-    gap:1rem;
-    grid-template-columns: repeat(3,1fr);
-    @media (max-width: variables.$breakpoint) {
-        grid-template-columns: 1fr;
-    }
-    .menu_liste {
-        border: 1px solid rosybrown;
-        background-color: white;
-    }
-
-}
-
 
 
