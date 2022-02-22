@@ -107,6 +107,10 @@ header {
   box-shadow: 2px 1px 8px -3px #353535;
   background-image: linear-gradient(to top, #9356DC, #ff79da);
 }
+.explorer button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
 
 /* partie fonction */
 .fonction h2 {
@@ -129,6 +133,8 @@ header {
 }
 .fonction li {
   position: relative;
+  display: flex;
+  align-items: center;
   list-style-type: none;
   background-color: #f6f6f6;
   padding: 1.3rem 2rem;
@@ -155,14 +161,15 @@ header {
 }
 .fonction li:hover {
   transform: none scale(1.02);
-  background-color: #f5edff;
+  background-color: #f2eafb;
+}
+.fonction li:hover i::before {
+  color: #9356DC;
 }
 .fonction li i.fas {
   margin-right: 1rem;
   color: #7e7e7e;
-}
-.fonction li i.fas:hover {
-  color: #9356DC;
+  font-size: 1.5rem;
 }
 
 /* partie menus*/
@@ -201,6 +208,7 @@ header {
   height: 27vh;
   border-radius: 1rem 1rem 0 0;
   background-size: cover;
+  background-image: center;
 }
 .menu .carte_image-1 {
   background-image: url("images/menu_1.jpg");
@@ -286,14 +294,6 @@ footer p {
   padding: 0.2rem;
 }
 
-@keyframes appear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 body {
   background-color: #f6f6f6;
 }
@@ -427,7 +427,6 @@ body {
   margin: 1rem;
   padding-left: 0.8rem;
   overflow: hidden;
-  animation: appear 1s;
   box-shadow: 2px 1px 8px -3px #353535;
 }
 #page-resto .details .menu_liste .menu-item .menu-item_prix {
@@ -453,9 +452,8 @@ body {
   flex-shrink: 0;
   border-radius: 0 1rem 1rem 0;
   background-color: #99E2D0;
-  margin-right: -4rem;
-  width: 4rem;
   transition: margin-right 500s;
+  visibility: hidden;
 }
 #page-resto .details .menu_liste .menu-item i {
   display: grid;
@@ -470,18 +468,40 @@ body {
   cursor: pointer;
 }
 #page-resto .details .menu_liste .menu-item:hover .menu-item_check {
-  margin-right: 0;
+  visibility: initial;
+  width: 70px;
+  animation: appear 0.5s;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #page-resto .details .menu_liste .menu-item:hover i {
-  animation: quqrerspin 1s ease-in-out;
+  animation: quaterspin 1s ease-in-out;
 }
 @keyframes quaterspin {
   0% {
-    transform: rotate(-270deg);
+    transform: rotate(-180deg);
   }
   100% {
     transform: rotate(0);
   }
+}
+#page-resto .details .menu_liste .anim1 {
+  animation: appear 1s ease-in-out forwards;
+}
+#page-resto .details .menu_liste .anim2 {
+  animation: appear 2s ease-in-out forwards;
+}
+#page-resto .details .menu_liste .anim3 {
+  animation: appear 3s ease-in-out forwards;
+}
+#page-resto .details .menu_liste .anim4 {
+  animation: appear 4s ease-in-out forwards;
 }
 #page-resto section.commander {
   height: 30vh;
@@ -500,6 +520,10 @@ body {
   cursor: pointer;
   box-shadow: 2px 1px 8px -3px #353535;
   background-image: linear-gradient(to top, #9356DC, #ff79da);
+}
+#page-resto section.commander button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */

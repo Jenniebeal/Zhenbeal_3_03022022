@@ -22,6 +22,8 @@ $base-height:1rem;
    
     & li {
         position: relative;
+        display: flex;
+        align-items: center;
         &::before {
             content: counter(chiffres);
             counter-increment: chiffres;
@@ -47,14 +49,15 @@ $base-height:1rem;
         @include mixins.base-shadow;
         &:hover {
             @include mixins.transform-zoom;
-            background-color: #f5edff;
+            background-color: lighten(colors.$purple, 35%);
+            i::before {
+                color:colors.$purple;
+            }
         }
         & i.fas {
             margin-right: 1rem;
             color: colors.$lightgrey ;
-            &:hover {
-                color:colors.$purple;
-            }
+            font-size: 1.5rem;
         }
     }   
 }

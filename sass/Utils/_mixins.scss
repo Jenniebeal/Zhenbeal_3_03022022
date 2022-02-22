@@ -67,5 +67,9 @@
     cursor: pointer;
     @include base-shadow;
     @include gradient;
+    &:hover {
+        transform: scale(1.02);
+        opacity: 0.9;
+    }
 
 }

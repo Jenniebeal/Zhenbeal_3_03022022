@@ -85,7 +85,6 @@ body {
             margin: 1rem;
             padding-left: 0.8rem;
             overflow: hidden;
-            animation: appear 1s;
             @include mixins.base-shadow;
             .menu-item_prix {
                 margin-left: auto;
@@ -112,10 +111,10 @@ body {
                 $button-width:4rem;
                 border-radius: 0 1rem 1rem 0;
                 background-color: colors.$tertiaire;
-                margin-right: -1 * $button-width;
-                width: $button-width;
                 transition: margin-right 500s;
+                visibility:hidden;
             }
+           
             i {
                 display: grid;
                 place-items: center;
@@ -129,18 +128,32 @@ body {
             &:hover {
                 cursor: pointer;
                 .menu-item_check {
-                margin-right: 0;
+                    visibility: initial;
+                    width: 70px;
+                    @include animations.appear;
+                    animation: appear 0.5s; 
+                
                 }
                 i {
                     @include animations.quaterspin;
-                    animation: quqrerspin 1s ease-in-out;
+                    animation: quaterspin 1s ease-in-out;
                 }
             }
+            
         }
-    }
-    
-    
-    
+        .anim1 {
+            animation: appear 1s ease-in-out forwards;
+        }
+        .anim2 {
+            animation: appear 2s ease-in-out forwards;
+        }
+        .anim3 {
+            animation: appear 3s ease-in-out forwards;
+        }
+        .anim4 {
+            animation: appear 4s ease-in-out forwards;
+        }
+    } 
 
 }
 
