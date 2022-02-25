@@ -4,17 +4,15 @@
 
 /* partie fonction */
 $base-height:1rem;
-.fonction h2 {
-    margin-left: 1.3rem;
-}
+
 .fonction {
     counter-reset: chiffres;
-    margin-top: 3rem;
-    margin-bottom: 4.5rem;
+    background-color: white;
+    padding: 2rem 0 3rem 0;
 
     & ol {
         display: flex;
-        gap: 2rem;
+        gap: 1.5rem;
         @media (max-width:1000px){
             flex-direction: column; 
         }
