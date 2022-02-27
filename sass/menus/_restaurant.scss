@@ -92,19 +92,19 @@ body {
             background-color: white;
             border-radius: 1rem;
             margin: 1rem auto;
-            padding: 0 0 8px 10px;
+            padding: 0 0 0 10px;
             overflow: hidden;
             box-shadow: 1px 3px 3px -3px colors.$lightgrey;
             .menu-item_prix {
                 margin-left: auto;
                 font-weight: bold;
-                padding:1rem 1rem 0 1rem;
+                padding:8px;
                 display: flex;
                 align-items: flex-end;
             }
             .menu-item_description{
                 overflow: hidden;
-                
+                padding:0 8px 8px 8px;
                 h4,p {
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -122,21 +122,20 @@ body {
             .menu-item_check {
                 display: grid;
                 place-items: center;
-                flex-shrink: 0;
-                $button-width:4rem;
                 border-radius: 0 1rem 1rem 0;
                 background-color: colors.$tertiaire;
-                transition: margin-right 500s;
+                transition:margin-right 500ms;
                 visibility:hidden;
             }
            
             i {
+                $size:1.3rem;
                 display: grid;
                 place-items: center;
                 background-color: white;
                 color:colors.$tertiaire;
-                aspect-ratio:1;
-                width: 1.3rem;
+                width: $size;
+                height:$size;
                 border-radius: 1rem;
 
             }
@@ -144,7 +143,7 @@ body {
                 cursor: pointer;
                 .menu-item_check {
                     visibility: initial;
-                    width: 70px;
+                    width: 55px;
                     @include animations.appear;
                     animation: appear 0.5s; 
                 
