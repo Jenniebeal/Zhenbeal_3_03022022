@@ -36,8 +36,16 @@ body {
             object-position: center 70%;
         }
     }
+    #image-1 {
+        @media (min-width:1000px) {
+            object-position: center  65%;
+        }
+    }
     #image-2 {
         object-position: center;
+        @media (min-width:1000px) {
+            object-position: center 58%;
+        }
     }
 
     .restaurant-main {
@@ -175,8 +183,11 @@ body {
         height: 30vh;
         display: grid; 
         place-items: center;
+
         button {
             @include mixins.base-button;
+            margin-top: 26px;
+            padding:1.1rem 3.5rem;
         }
         
     }
