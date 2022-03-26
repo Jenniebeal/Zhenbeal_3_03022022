@@ -66,11 +66,13 @@
     &::after {
         @include heart($opacity:0,$font-weight:900,$color:transparent);
         @include gradient(1);
+        
     }
     &:hover::after {
         opacity: 1;
         transform:translateY(-50%) scale(1.2);
        }
+    
     
 }
 

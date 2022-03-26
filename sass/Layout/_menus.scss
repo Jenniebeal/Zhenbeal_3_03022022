@@ -63,8 +63,8 @@
             }
         }
         &_description {
-            padding-bottom: 0.5rem;
             @include mixins.heart-animated;
+            padding-bottom: 0.5rem;
             
             h3,p {
                 padding: 1px 0 6px 10px;
@@ -73,6 +73,11 @@
             h3 {
                 padding-top:15px;
             }
+            
+
+        
         } 
+        
     }
+   
 }
